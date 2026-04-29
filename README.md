@@ -10,49 +10,41 @@
 
 #### 한 줄 요약
 
-<table>
-<tr>
-<td align="center" width="22%">
+<table align="left"><tr><td align="center" width="180" height="120">
 
 ### 📰
 **RSS 수집**
 
-</td>
-<td align="center" width="3%">
+</td></tr></table>
 
-### →
+<p align="left">&nbsp;&nbsp;&nbsp;<b>→</b>&nbsp;&nbsp;&nbsp;</p>
 
-</td>
-<td align="center" width="22%">
+<table align="left"><tr><td align="center" width="180" height="120">
 
 ### 🤖
 **AI 선별·요약**
 
-</td>
-<td align="center" width="3%">
+</td></tr></table>
 
-### →
+<p align="left">&nbsp;&nbsp;&nbsp;<b>→</b>&nbsp;&nbsp;&nbsp;</p>
 
-</td>
-<td align="center" width="22%">
+<table align="left"><tr><td align="center" width="180" height="120">
 
 ### 🎨
 **카드 이미지 생성**
 
-</td>
-<td align="center" width="3%">
+</td></tr></table>
 
-### →
+<p align="left">&nbsp;&nbsp;&nbsp;<b>→</b>&nbsp;&nbsp;&nbsp;</p>
 
-</td>
-<td align="center" width="22%">
+<table align="left"><tr><td align="center" width="180" height="120">
 
 ### 💬
 **Slack 자동 발송**
 
-</td>
-</tr>
-</table>
+</td></tr></table>
+
+<br clear="all"/>
 
 #### 단계별 상세
 
