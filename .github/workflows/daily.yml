@@ -24,14 +24,6 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Download Pretendard fonts
-        run: |
-          mkdir -p assets
-          BASE="https://github.com/orioncactus/pretendard/raw/main/packages/pretendard/dist/public/static"
-          curl -sSL -o assets/Pretendard-Regular.ttf  "$BASE/Pretendard-Regular.ttf"
-          curl -sSL -o assets/Pretendard-SemiBold.ttf "$BASE/Pretendard-SemiBold.ttf"
-          curl -sSL -o assets/Pretendard-Bold.ttf    "$BASE/Pretendard-Bold.ttf"
-
       - name: Run bot
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
