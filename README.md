@@ -12,25 +12,40 @@
 
 <table>
 <tr>
-<td align="center" width="25%">
+<td align="center" width="22%">
 
 ### 📰
 **RSS 수집**
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="3%">
+
+### →
+
+</td>
+<td align="center" width="22%">
 
 ### 🤖
 **AI 선별·요약**
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="3%">
+
+### →
+
+</td>
+<td align="center" width="22%">
 
 ### 🎨
 **카드 이미지 생성**
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="3%">
+
+### →
+
+</td>
+<td align="center" width="22%">
 
 ### 💬
 **Slack 자동 발송**
