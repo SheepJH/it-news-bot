@@ -1,0 +1,52 @@
+name: Daily IT News
+
+on:
+  schedule:
+    # KST 08:00 = UTC 23:00 (전날)
+    - cron: "0 23 * * *"
+  workflow_dispatch: # 수동 실행도 가능
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # sent_urls.txt 커밋용
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Download Pretendard fonts
+        run: |
+          mkdir -p assets
+          BASE="https://github.com/orioncactus/pretendard/raw/main/packages/pretendard/dist/public/static"
+          curl -sSL -o assets/Pretendard-Regular.ttf  "$BASE/Pretendard-Regular.ttf"
+          curl -sSL -o assets/Pretendard-SemiBold.ttf "$BASE/Pretendard-SemiBold.ttf"
+          curl -sSL -o assets/Pretendard-Bold.ttf    "$BASE/Pretendard-Bold.ttf"
+
+      - name: Run bot
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SENDER: slack
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: python main.py
+
+      - name: Commit sent log
+        if: success()
+        run: |
+          if [ -f sent_urls.txt ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add sent_urls.txt
+            git diff --staged --quiet || git commit -m "chore: update sent_urls"
+            git push
+          fi

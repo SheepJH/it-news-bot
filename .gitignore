@@ -1,0 +1,19 @@
+# 비밀
+.env
+
+# 파이썬
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# 로컬 미리보기
+output/
+
+# Claude Code 로컬 세션
+.claude/
+
+# sent_urls.txt는 일부러 커밋함 — GitHub Actions가 매일 업데이트

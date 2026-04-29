@@ -1,0 +1,9 @@
+feedparser==6.0.11
+anthropic>=0.70.0
+newspaper3k==0.2.8
+lxml_html_clean==0.2.2
+requests==2.32.3
+Pillow==11.0.0
+pydantic==2.9.2
+python-dotenv==1.0.1
+slack_sdk>=3.27.0
