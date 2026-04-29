@@ -10,9 +10,34 @@
 
 #### 한 줄 요약
 
-```
-📰 RSS 수집  →  🤖 AI 선별·요약  →  🎨 카드 이미지 생성  →  💬 Slack 자동 발송
-```
+<table>
+<tr>
+<td align="center" width="25%">
+
+### 📰
+**RSS 수집**
+
+</td>
+<td align="center" width="25%">
+
+### 🤖
+**AI 선별·요약**
+
+</td>
+<td align="center" width="25%">
+
+### 🎨
+**카드 이미지 생성**
+
+</td>
+<td align="center" width="25%">
+
+### 💬
+**Slack 자동 발송**
+
+</td>
+</tr>
+</table>
 
 #### 단계별 상세
 
